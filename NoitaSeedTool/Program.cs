@@ -48,7 +48,7 @@ namespace NoitaSeedTool
             if (noitaProcess != null)
             {
                 IntPtr moduleBase = noitaProcess.MainModule.BaseAddress;
-                IntPtr seedAddress = moduleBase + 0xBEE850; // replace 0x123456 with the actual address of the seed --  0xBF0904 is beta memory location
+                IntPtr seedAddress = moduleBase + 0xBF08E4;
 
                 byte[] seedBytes = new byte[4];
                 int bytesRead = 0;
