@@ -20,6 +20,7 @@ namespace NoitaSeedTool
                     lastSeed = currentSeed;
 
                     string url = "https://noitool.com/?seed=" + currentSeed;
+                    Console.WriteLine(currentSeed);
                     OpenWebPage(url);
                     Thread.Sleep(450);
                     Process[] processes = Process.GetProcessesByName("noita");
@@ -48,7 +49,7 @@ namespace NoitaSeedTool
             if (noitaProcess != null)
             {
                 IntPtr moduleBase = noitaProcess.MainModule.BaseAddress;
-                IntPtr seedAddress = moduleBase + 0xBF08E4;
+                IntPtr seedAddress = moduleBase + 0xBF5A48;
 
                 byte[] seedBytes = new byte[4];
                 int bytesRead = 0;
